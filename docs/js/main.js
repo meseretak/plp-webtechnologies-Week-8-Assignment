@@ -1,11 +1,11 @@
-/* main.js - slider, nav toggle, form validation */
-document.addEventListener('DOMContentLoaded', function () {
+// main.js - slider, nav toggle, contact form
+document.addEventListener('DOMContentLoaded', () => {
 
-  // populate years in footers
+  // ===== Update footer year dynamically =====
   const yearEls = document.querySelectorAll('#year, #year-about, #year-services, #year-contact');
-  yearEls.forEach(e => { if (e) e.textContent = new Date().getFullYear(); });
+  yearEls.forEach(el => el && (el.textContent = new Date().getFullYear()));
 
-  /* NAV toggle for small screens */
+  // ===== NAV toggle for small screens =====
   const navToggle = document.getElementById('nav-toggle');
   if (navToggle) {
     navToggle.addEventListener('click', () => {
@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* SLIDER */
-  (function sliderInit() {
-    const slider = document.getElementById('mainSlider');
-    if (!slider) return;
+  // ===== SLIDER FUNCTIONALITY =====
+  const slider = document.getElementById('mainSlider');
+  if (slider) {
     const slidesWrapper = slider.querySelector('.slides');
     const slides = slider.querySelectorAll('.slide');
     const prevBtn = slider.querySelector('.prev');
@@ -25,92 +24,102 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let index = 0;
     const total = slides.length;
-    let width = slider.querySelector('.slides-wrapper').clientWidth;
     let autoTimer = null;
     let isDragging = false;
     let startX = 0;
-    let currentTranslate = 0;
 
-    // create dots
+    // Create slider dots
     for (let i = 0; i < total; i++) {
-      const btn = document.createElement('button');
-      btn.addEventListener('click', () => goTo(i));
-      dotsContainer.appendChild(btn);
+      const dot = document.createElement('button');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
     }
     const dots = dotsContainer.querySelectorAll('button');
 
-    function update() {
+    // ===== Functions =====
+    const updateSlider = () => {
       slidesWrapper.style.transform = `translateX(${-index * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === index));
-    }
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    };
 
-    function next() { index = (index + 1) % total; update(); }
-    function prev() { index = (index - 1 + total) % total; update(); }
-    function goTo(i) { index = i % total; update(); }
+    const nextSlide = () => { index = (index + 1) % total; updateSlider(); };
+    const prevSlide = () => { index = (index - 1 + total) % total; updateSlider(); };
+    const goToSlide = (i) => { index = i % total; updateSlider(); };
 
-    nextBtn.addEventListener('click', next);
-    prevBtn.addEventListener('click', prev);
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
 
-    // auto play
-    function startAuto() { stopAuto(); autoTimer = setInterval(next, 4500); }
-    function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
+    // ===== Autoplay =====
+    const startAuto = () => { stopAuto(); autoTimer = setInterval(nextSlide, 4500); };
+    const stopAuto = () => { if (autoTimer) clearInterval(autoTimer); };
 
-    // swipe
+    // ===== Drag / Swipe support =====
     const wrapper = slider.querySelector('.slides-wrapper');
+
     wrapper.addEventListener('pointerdown', (e) => {
-      isDragging = true; startX = e.clientX; stopAuto();
+      isDragging = true;
+      startX = e.clientX;
+      stopAuto();
       wrapper.setPointerCapture(e.pointerId);
     });
+
     wrapper.addEventListener('pointermove', (e) => {
       if (!isDragging) return;
       const dx = e.clientX - startX;
-      slidesWrapper.style.transform = `translateX(${ -index*100 + (dx / wrapper.clientWidth)*100 }%)`;
+      slidesWrapper.style.transform = `translateX(${-index*100 + (dx / wrapper.clientWidth) * 100}%)`;
     });
+
     wrapper.addEventListener('pointerup', (e) => {
       if (!isDragging) return;
       isDragging = false;
       const dx = e.clientX - startX;
-      if (Math.abs(dx) > 60) {
-        if (dx < 0) next(); else prev();
-      } else update();
+      if (Math.abs(dx) > 60) dx < 0 ? nextSlide() : prevSlide();
+      else updateSlider();
       startAuto();
     });
-    wrapper.addEventListener('pointercancel', () => { isDragging = false; update(); startAuto(); });
 
-    // init
-    update();
+    wrapper.addEventListener('pointercancel', () => { isDragging = false; updateSlider(); startAuto(); });
+
+    // Init
+    updateSlider();
     startAuto();
 
-    // responsive: recalc width on resize
-    window.addEventListener('resize', () => { width = slider.querySelector('.slides-wrapper').clientWidth; update(); });
-  })();
+    // Responsive: recalc width on resize
+    window.addEventListener('resize', updateSlider);
+  }
 
-  /* Contact form basic validation + fake submit */
+  // ===== CONTACT FORM VALIDATION =====
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
       const name = contactForm.querySelector('#name').value.trim();
       const email = contactForm.querySelector('#email').value.trim();
       const message = contactForm.querySelector('#message').value.trim();
       const status = document.getElementById('formStatus');
 
-      // simple checks
+      // Validation
       if (!name || !email || !message) {
-        status.textContent = 'Please fill name, email and message.';
-        return;
-      }
-      if (!/^.+@.+\..+$/.test(email)) {
-        status.textContent = 'Please enter a valid email.';
+        status.textContent = 'Please fill in all fields.';
+        status.style.color = 'red';
         return;
       }
 
-      // mimic submit (replace with real API or mailto)
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        status.textContent = 'Please enter a valid email address.';
+        status.style.color = 'red';
+        return;
+      }
+
+      // Simulate submit
       status.textContent = 'Sending...';
+      status.style.color = '#0f766e';
       setTimeout(() => {
-        status.textContent = 'Thanks! Your message has been received. I will respond shortly.';
+        status.textContent = 'Thank you! Your message has been received. I will respond shortly.';
         contactForm.reset();
-      }, 900);
+      }, 1000);
     });
   }
 
