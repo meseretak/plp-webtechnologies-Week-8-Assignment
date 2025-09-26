@@ -3,87 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meseret Portfolio</title>
+    <title>Contact - Meseret Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header / Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Meseret</div>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="logo">Meseret Portfolio</div>
+        <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
-    <!-- Slider -->
-    <section class="slider">
-        <div class="slides">
-            <img src="images/slider1.jpg" alt="Slide 1">
-            <img src="images/slider2.jpg" alt="Slide 2">
-            <img src="images/slider3.jpg" alt="Slide 3">
-        </div>
-    </section>
-
-    <!-- About Preview -->
-    <section class="about-preview">
-        <h2>About Me</h2>
-        <p>Hello! I am Meseret, a passionate Project Manager & QA Expert. I build robust software solutions with quality assurance at the heart.</p>
-        <a href="about.html" class="btn">Read More</a>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="services-preview">
-        <h2>My Services</h2>
-        <div class="services-cards">
-            <div class="card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Web Development</h3>
-                <p>Professional websites with clean, modern UI/UX.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-vial"></i>
-                <h3>QA & Testing</h3>
-                <p>Manual & automated testing for high-quality software.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-project-diagram"></i>
-                <h3>Project Management</h3>
-                <p>End-to-end management to deliver on time & budget.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Preview -->
-    <section class="contact-preview">
-        <h2>Contact Me</h2>
-        <p>Have a project in mind? Let's discuss it!</p>
-        <a href="contact.html" class="btn">Get in Touch</a>
-    </section>
-
-    <!-- Social Media Sidebar -->
-    <div class="social-sidebar">
-        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+        <a href="contact.html" class="cta-btn">Get in Touch</a>
     </div>
+</header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
-    </footer>
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="section-container">
+        <h2>Contact Me</h2>
+        <p>Fill out the form below to get in touch or subscribe to updates.</p>
 
-    <script src="js/script.js"></script>
+        <!-- Contact Form -->
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lname">Second Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Your second name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Subscribe to newsletter</label>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
