@@ -62,3 +62,52 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 
 /* Small tweaks */
 .brand{letter-spacing:.4px}
+/* === Image Slider Styles === */
+.image-slider {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.slides img {
+  width: 100%;
+  display: none;
+}
+
+.slides img.active {
+  display: block;
+  animation: fade 0.8s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.slider-wrapper button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.slider-wrapper .prev { left: 10px; }
+.slider-wrapper .next { right: 10px; }
+
+.slider-wrapper button:hover {
+  background: rgba(0,0,0,0.7);
+}
