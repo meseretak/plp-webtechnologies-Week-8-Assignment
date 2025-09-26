@@ -1,113 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EthioOps — Meseret Akalu — Home</title>
-<link rel="icon" href="assets/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meseret Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav>
+            <div class="logo">Meseret</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Social Sidebar -->
-<aside class="social-sidebar">
-  <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="https://github.com/meseretak" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-</aside>
+    <!-- Slider -->
+    <section class="slider">
+        <div class="slides">
+            <img src="images/slider1.jpg" alt="Slide 1">
+            <img src="images/slider2.jpg" alt="Slide 2">
+            <img src="images/slider3.jpg" alt="Slide 3">
+        </div>
+    </section>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">EthioOps</a>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="nav-toggle" class="nav-toggle" aria-label="toggle menu">☰</button>
-  </div>
-</header>
+    <!-- About Preview -->
+    <section class="about-preview">
+        <h2>About Me</h2>
+        <p>Hello! I am Meseret, a passionate Project Manager & QA Expert. I build robust software solutions with quality assurance at the heart.</p>
+        <a href="about.html" class="btn">Read More</a>
+    </section>
 
-<!-- HERO -->
-<main>
-<section class="hero container">
-  <div class="hero-left">
-    <h1>Meseret Akalu — QA & DevOps Consultant</h1>
-    <p class="lead">I help teams ship with confidence — testing strategy, automation, security checks, and reliable DevOps practices.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="services.html">Our Services</a>
-      <a class="btn btn-outline" href="contact.html">Work with me</a>
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <h2>My Services</h2>
+        <div class="services-cards">
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Professional websites with clean, modern UI/UX.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-vial"></i>
+                <h3>QA & Testing</h3>
+                <p>Manual & automated testing for high-quality software.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Project Management</h3>
+                <p>End-to-end management to deliver on time & budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="contact-preview">
+        <h2>Contact Me</h2>
+        <p>Have a project in mind? Let's discuss it!</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- Social Media Sidebar -->
+    <div class="social-sidebar">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
     </div>
-    <div class="trust">
-      <span>9+ years experience</span> • <span>Banking & Security</span> • <span>Project Manager</span>
-    </div>
-  </div>
-  <div class="hero-right">
-    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="team working" />
-  </div>
-</section>
 
-<!-- Slider -->
-<section class="slider-section container">
-  <h2 class="section-title">Work in Action</h2>
-  <div class="slider" id="mainSlider">
-    <button class="slider-btn prev" aria-label="previous">‹</button>
-    <div class="slides-wrapper">
-      <div class="slides">
-        <div class="slide active"><img src="https://images.unsplash.com/photo-1581091215367-6c6d9b1b1b5b?auto=format&fit=crop&w=1600&q=80" alt="testing workflow"></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="devops pipeline"></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1600&q=80" alt="automation"></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80" alt="dashboard"></div>
-      </div>
-    </div>
-    <button class="slider-btn next" aria-label="next">›</button>
-    <div class="dots"></div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
+    </footer>
 
-<!-- Features -->
-<section class="container features-grid">
-  <article class="feature">
-    <h3>Test Strategy & Planning</h3>
-    <p>From BRD to release — clear mapping, risk-based coverage, and measurable acceptance criteria.</p>
-  </article>
-  <article class="feature">
-    <h3>Automation & CI</h3>
-    <p>Selenium / Cypress pipelines, test reporting, and maintainable suites for reliable regression checks.</p>
-  </article>
-  <article class="feature">
-    <h3>Performance & Security</h3>
-    <p>Load testing, vulnerability scanning, and pre-prod security checks — reduce surprises in production.</p>
-  </article>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <span class="name">Meseret Akalu</span>
-      <nav class="footer-pages">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-    <div class="footer-right">
-      <p>QA & DevOps Consulting — Ethiopia</p>
-      <small>© <span id="year">2025</span> Meseret Akalu. All rights reserved.</small>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
