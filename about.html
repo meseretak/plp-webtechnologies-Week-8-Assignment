@@ -1,39 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — EthioOps QA & DevOps</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">MyPortfolio</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><button id="theme-toggle">Dark Mode</button></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="about">
-  <div class="container">
-    <img src="images/profile.jpg" alt="Profile" class="profile-img">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>Hello! I'm a passionate web developer with skills in HTML, CSS, JavaScript, and modern frontend frameworks. I love building interactive and responsive web applications that look great on any device.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">EthioOps</a>
+      <button id="nav-toggle-2" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav id="site-nav-2" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer>
-  <p>&copy; 2025 MyPortfolio. All Rights Reserved.</p>
-</footer>
+  <main class="container about">
+    <h1>About EthioOps</h1>
+    <p>We are a QA and DevOps consultancy focused on practical testing strategies for modern software teams. Our approach merges traditional testing rigor with modern automation and DevOps practices.</p>
 
-<script src="js/script.js"></script>
+    <section class="team-grid">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=60" alt="Team member">
+        <h4>Meseret Akalu</h4>
+        <p>Founder & Project Manager — 9+ years in IT & security background.</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1545996124-1b9c3a3e3f2a?auto=format&fit=crop&w=400&q=60" alt="Team member">
+        <h4>Biniyam</h4>
+        <p>QA Lead — Test automation and CI/CD specialist.</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1545996124-1b9c3a3e3f2a?auto=format&fit=crop&w=400&q=60" alt="Team member">
+        <h4>Isayas</h4>
+        <p>Senior Tester — Performance and security testing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer small-footer">
+    <div class="container copyright">© <span id="year-2"></span> EthioOps</div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

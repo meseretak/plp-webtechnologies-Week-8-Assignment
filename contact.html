@@ -1,40 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Me</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — EthioOps</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Optional: Firebase SDK (only enable if you configured firebase-config.js) -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="firebase/firebase-config.js"></script> -->
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">MyPortfolio</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><button id="theme-toggle">Dark Mode</button></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">EthioOps</a>
+      <button id="nav-toggle-4" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav id="site-nav-4" class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section class="contact">
-  <h2>Contact Me</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-    <p id="formMessage"></p>
-  </form>
-</section>
+  <main class="container contact-page">
+    <h1>Contact Us</h1>
+    <p>Have an inquiry? Fill the form and we'll get back to you.</p>
 
-<footer>
-  <p>&copy; 2025 MyPortfolio. All Rights Reserved.</p>
-</footer>
+    <form id="contact-form" class="contact-form" novalidate>
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" required minlength="3" placeholder="Your name">
 
-<script src="js/script.js"></script>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" required placeholder="Subject">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required minlength="10" placeholder="Your message"></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Send Message</button>
+        <button type="button" id="save-local" class="btn btn-outline">Save Locally</button>
+      </div>
+
+      <div id="form-status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer small-footer">
+    <div class="container copyright">© <span id="year-4"></span> EthioOps</div>
+  </footer>
+
+  <script src="js/validator.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

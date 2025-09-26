@@ -1,0 +1,64 @@
+/* Basic CSS Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f7f9fc;--card:#ffffff;--muted:#6b7280;--accent:#0f766e;--accent-2:#0ea5a4;--radius:12px;--container:1100px
+}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#111; line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);font-size:1.2rem;text-decoration:none}
+.site-header{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));backdrop-filter:saturate(140%) blur(4px);position:sticky;top:0;z-index:50;box-shadow:0 1px 0 rgba(16,24,40,0.03)}
+.site-nav ul{list-style:none;display:flex;gap:1rem}
+.site-nav a{text-decoration:none;color:var(--muted);padding:.6rem .8rem;border-radius:8px}
+.site-nav a.active{color:var(--accent);font-weight:600}
+.nav-toggle{display:none;background:none;border:0;font-size:1.3rem}
+
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.hero h1{font-size:2rem;margin-bottom:0.6rem}
+.hero p{color:var(--muted)}
+.btn{background:var(--accent);color:white;padding:.7rem 1rem;border-radius:10px;text-decoration:none;border:0;display:inline-block}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:.6rem .9rem}
+.hero-image img{width:100%;border-radius:12px;display:block}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:2rem 0}
+.feature{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 4px 18px rgba(15,23,42,0.04)}
+
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.project-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 6px 24px rgba(2,6,23,0.06)}
+.project-card img{width:100%;height:160px;object-fit:cover}
+.project-body{padding:1rem}
+
+.testimonials{margin:3rem 0}
+.slider{position:relative;min-height:140px}
+.slide{display:none}
+.slide.active{display:block}
+.slider-controls{margin-top:.6rem;display:flex;gap:.5rem}
+.slider-controls button{padding:.4rem .6rem;border-radius:8px;border:1px solid #ddd;background:white}
+
+.site-footer{background:#fff;margin-top:3rem;padding:1.5rem 0;border-top:1px solid #eef2f7}
+.footer-grid{display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.small-footer{padding:1rem 0}
+.copyright{margin-top:.8rem;color:var(--muted);font-size:0.9rem}
+
+/* Forms */
+.contact-form{display:grid;gap:.8rem;max-width:720px}
+.contact-form input,.contact-form textarea{padding:.7rem;border-radius:10px;border:1px solid #e6eef2}
+.contact-form label{font-weight:600;color:#111}
+.form-actions{display:flex;gap:.6rem;margin-top:.4rem}
+#form-status{margin-top:.6rem;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .site-nav{display:none}
+  .nav-toggle{display:block}
+  .header-inner{gap:1rem}
+}
+
+/* Small tweaks */
+.brand{letter-spacing:.4px}
