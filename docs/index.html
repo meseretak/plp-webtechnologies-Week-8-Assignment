@@ -114,37 +114,45 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div>
-        <h3>Meseret Akalu</h3>
-        <p>QA & DevOps Consulting</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank">
-            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
-          </a>
-          <a href="https://github.com/meseretak" target="_blank">
-            <img src="assets/icons/github.svg" alt="GitHub">
-          </a>
-          <a href="https://www.youtube.com/" target="_blank">
-            <img src="assets/icons/youtube.svg" alt="YouTube">
-          </a>
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div>
-        <p>QA & DevOps consulting — Ethiopia</p>
-        <p class="small">(links removed for sample)</p>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <!-- Left column: Personal / Social -->
+    <div>
+      <h3>Meseret Akalu</h3>
+      <p>QA & DevOps Consulting</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/meseretak" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
       </div>
     </div>
-    <div class="copyright">© <span id="year"></span> Meseret Akalu — All rights reserved</div>
-  </footer>
+
+    <!-- Middle column: Site links -->
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right column: Other info -->
+    <div>
+      <p>QA & DevOps consulting — Ethiopia</p>
+      <p class="small">(links removed for sample)</p>
+    </div>
+  </div>
+
+  <div class="copyright">© <span id="year"></span> Meseret Akalu — All rights reserved</div>
+</footer>
+
+<!-- Footer CSS -->
+<style>
+  .social-links { display:flex; gap:1rem; margin-top:0.5rem; font-size:0.9rem; }
+  .social-links a { color:#fff; transition:0.3s; }
+  .social-links a:hover { color:#00bcd4; transform:scale(1.1); }
+</style>
+
 
   <!-- Scripts -->
   <script>
