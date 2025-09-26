@@ -1,90 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meseret Akalu Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EthioOps — Meseret Akalu — Home</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
+
+  <!-- Social Sidebar (left) -->
+  <aside class="social-sidebar" aria-hidden="false">
+    <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/meseretak" target="_blank">GitHub</a>
+    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+  </aside>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand">Meseret Akalu</a>
+      <a class="brand" href="index.html">EthioOps</a>
       <nav class="site-nav">
         <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <button class="nav-toggle">☰</button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="toggle menu">☰</button>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero container">
-    <div class="hero-grid">
-      <div>
-        <h1>Hi, I’m Meseret 👋</h1>
-        <p>A Project Manager & QA/DevOps Consultant passionate about building reliable software.</p>
-        <a href="#projects" class="btn">View My Work</a>
-      </div>
-      <div class="hero-image">
-        <img src="https://via.placeholder.com/500x350" alt="Meseret Akalu">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURES ===== -->
-  <section class="features container">
-    <div class="feature">✨ Reliable Test Cases</div>
-    <div class="feature">🚀 DevOps & Automation</div>
-    <div class="feature">📊 Strong Project Management</div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x160" alt="Project 1">
-        <div class="project-body">
-          <h3>Banking QA</h3>
-          <p>Full test lifecycle for financial systems.</p>
+  <!-- HERO -->
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Meseret Akalu — QA & DevOps Consultant</h1>
+        <p class="lead">I help teams ship with confidence — testing strategy, automation, security checks, and reliable DevOps practices.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="services.html">Our Services</a>
+          <a class="btn btn-ghost" href="contact.html">Work with me</a>
+        </div>
+        <div class="trust">
+          <span>9+ years experience</span> • <span>Banking & Security</span> • <span>Project Manager</span>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x160" alt="Project 2">
-        <div class="project-body">
-          <h3>Automation Suite</h3>
-          <p>Built scalable test automation pipelines.</p>
-        </div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="team working" />
       </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300x160" alt="Project 3">
-        <div class="project-body">
-          <h3>DevOps CI/CD</h3>
-          <p>Improved delivery speed with CI/CD integration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
+    <!-- Slider -->
+    <section class="slider-section container">
+      <h2 class="section-title">Work in Action</h2>
+      <div class="slider" id="mainSlider">
+        <button class="slider-btn prev" aria-label="previous">‹</button>
+        <div class="slides-wrapper">
+          <div class="slides">
+            <div class="slide"><img src="https://images.unsplash.com/photo-1581091215367-6c6d9b1b1b5b?auto=format&fit=crop&w=1600&q=80" alt="testing workflow"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="devops pipeline"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1600&q=80" alt="automation"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80" alt="dashboard"></div>
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="next">›</button>
+        <div class="dots" aria-hidden="false"></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="container features-grid">
+      <article class="feature">
+        <h3>Test Strategy & Planning</h3>
+        <p>From BRD to release — clear mapping, risk-based coverage, and measurable acceptance criteria.</p>
+      </article>
+      <article class="feature">
+        <h3>Automation & CI</h3>
+        <p>Selenium / Cypress pipelines, test reporting, and maintainable suites for reliable regression checks.</p>
+      </article>
+      <article class="feature">
+        <h3>Performance & Security</h3>
+        <p>Load testing, vulnerability scanning and pre-prod security checks — reduce surprises in production.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-grid">
+    <div class="container footer-inner">
       <div class="footer-left">
-        <span class="name">Meseret Akalu</span> |
-        <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/meseretak" target="_blank">GitHub</a> |
-        <a href="#" target="_blank">YouTube</a>
+        <span class="name">Meseret Akalu</span>
+        <nav class="footer-pages">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-      <div class="copyright">
-        © 2025 All rights reserved.
+      <div class="footer-right">
+        <p>QA & DevOps Consulting — Ethiopia</p>
+        <small>© <span id="year">2025</span> Meseret Akalu. All rights reserved.</small>
       </div>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
