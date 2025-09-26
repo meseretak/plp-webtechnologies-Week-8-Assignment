@@ -1,26 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EthioOps — Meseret Akalu</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EthioOps — Meseret Akalu — Home</title>
 <link rel="icon" href="assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- Animated Social Sidebar -->
+<!-- Social Sidebar -->
 <aside class="social-sidebar">
-  <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank" class="social-link linkedin">
-    <i class="fab fa-linkedin-in"></i> LinkedIn
-  </a>
-  <a href="https://github.com/meseretak" target="_blank" class="social-link github">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-  <a href="https://www.youtube.com/" target="_blank" class="social-link youtube">
-    <i class="fab fa-youtube"></i> YouTube
-  </a>
+  <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/meseretak" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
 </aside>
 
 <!-- Header -->
@@ -35,71 +31,63 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button id="nav-toggle" class="nav-toggle">☰</button>
+    <button id="nav-toggle" class="nav-toggle" aria-label="toggle menu">☰</button>
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <div class="hero-left">
-      <h1 class="hero-title">Empowering QA & DevOps Excellence</h1>
-      <p class="hero-lead">Delivering robust, secure, and high-performance software with confidence and speed.</p>
-      <div class="hero-cta">
-        <a href="services.html" class="btn btn-primary">Explore Services</a>
-        <a href="contact.html" class="btn btn-ghost">Work With Me</a>
-      </div>
+<!-- HERO -->
+<main>
+<section class="hero container">
+  <div class="hero-left">
+    <h1>Meseret Akalu — QA & DevOps Consultant</h1>
+    <p class="lead">I help teams ship with confidence — testing strategy, automation, security checks, and reliable DevOps practices.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="services.html">Our Services</a>
+      <a class="btn btn-outline" href="contact.html">Work with me</a>
     </div>
-    <div class="hero-right">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Team Collaboration">
+    <div class="trust">
+      <span>9+ years experience</span> • <span>Banking & Security</span> • <span>Project Manager</span>
     </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="team working" />
   </div>
 </section>
 
-<!-- Slider Section -->
-<section class="slider-section">
-  <div class="container">
-    <h2 class="section-title">Projects in Action</h2>
-    <div class="slider" id="mainSlider">
-      <button class="slider-btn prev">‹</button>
-      <div class="slides-wrapper">
-        <div class="slides">
-          <div class="slide active">
-            <img src="https://images.unsplash.com/photo-1581091215367-6c6d9b1b1b5b?auto=format&fit=crop&w=1600&q=80" alt="Testing Workflow">
-            <div class="slide-caption">Rigorous Testing Processes</div>
-          </div>
-          <div class="slide">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="DevOps Pipeline">
-            <div class="slide-caption">Seamless CI/CD & Automation</div>
-          </div>
-          <div class="slide">
-            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80" alt="Dashboard">
-            <div class="slide-caption">Performance & Security Monitoring</div>
-          </div>
-        </div>
+<!-- Slider -->
+<section class="slider-section container">
+  <h2 class="section-title">Work in Action</h2>
+  <div class="slider" id="mainSlider">
+    <button class="slider-btn prev" aria-label="previous">‹</button>
+    <div class="slides-wrapper">
+      <div class="slides">
+        <div class="slide active"><img src="https://images.unsplash.com/photo-1581091215367-6c6d9b1b1b5b?auto=format&fit=crop&w=1600&q=80" alt="testing workflow"></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="devops pipeline"></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1600&q=80" alt="automation"></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80" alt="dashboard"></div>
       </div>
-      <button class="slider-btn next">›</button>
-      <div class="dots"></div>
     </div>
+    <button class="slider-btn next" aria-label="next">›</button>
+    <div class="dots"></div>
   </div>
 </section>
 
 <!-- Features -->
-<section class="features container">
-  <div class="feature-card">
+<section class="container features-grid">
+  <article class="feature">
     <h3>Test Strategy & Planning</h3>
-    <p>Complete mapping from BRD to release with risk-based coverage and measurable acceptance criteria.</p>
-  </div>
-  <div class="feature-card">
-    <h3>Automation & CI/CD</h3>
-    <p>Maintainable pipelines, reliable regression suites, and seamless integration into your workflow.</p>
-  </div>
-  <div class="feature-card">
+    <p>From BRD to release — clear mapping, risk-based coverage, and measurable acceptance criteria.</p>
+  </article>
+  <article class="feature">
+    <h3>Automation & CI</h3>
+    <p>Selenium / Cypress pipelines, test reporting, and maintainable suites for reliable regression checks.</p>
+  </article>
+  <article class="feature">
     <h3>Performance & Security</h3>
-    <p>Load testing, vulnerability scanning, and pre-prod checks for safer production deployments.</p>
-  </div>
+    <p>Load testing, vulnerability scanning, and pre-prod security checks — reduce surprises in production.</p>
+  </article>
 </section>
+</main>
 
 <!-- Footer -->
 <footer class="site-footer">
@@ -120,7 +108,6 @@
   </div>
 </footer>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
