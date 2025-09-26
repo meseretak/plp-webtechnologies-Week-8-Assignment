@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Meseret Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Meseret Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    <div class="container">
+    <div class="container header-container">
         <div class="logo">Meseret Portfolio</div>
         <nav>
             <ul class="nav-links">
@@ -25,69 +25,77 @@
     </div>
 </header>
 
-<!-- About Me Section -->
-<section class="about-me">
-    <div class="section-container">
-        <h2>About Me</h2>
-        <p>Hello! I am <strong>Meseret Akalu</strong>, a passionate IT leader and Quality Assurance Maestro with over a decade of experience shaping the future of software excellence. Currently, I orchestrate seamless IT project delivery at <strong>Awash Bank</strong>, fusing QA and DevOps practices for top-notch software quality, reliability, and security.</p>
+<!-- Hero Section -->
+<section class="hero-about">
+    <div class="hero-content">
+        <h1>Hello, I'm <span>Meseret Akalu</span></h1>
+        <p class="animated-text">Principal QA & Project Manager | DevOps | Automation | Change Management | ITIL</p>
     </div>
 </section>
 
 <!-- Experience Timeline -->
-<section class="timeline">
+<section class="experience">
     <div class="section-container">
         <h2>Experience</h2>
 
-        <div class="timeline-item">
-            <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
-            <div class="timeline-content">
-                <h3>Principal IT Project QA & Change Management</h3>
-                <h4>Awash Bank · Full-time</h4>
-                <span>May 2024 – Present · 1 yr 5 mos · Ethiopia</span>
-                <ul>
-                    <li>Git & GitHub – Source code management</li>
-                    <li>Jenkins – CI/CD pipelines</li>
-                    <li>Selenium – Automation testing</li>
-                    <li>JMeter – Performance testing</li>
-                    <li>Docker & Kubernetes – Container orchestration</li>
-                    <li>Agile Scrum Master</li>
-                    <li>Certified in Microsoft Azure</li>
-                    <li>Change Management & ITIL Processes</li>
-                </ul>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <h3>Principal IT Project QA & Change Management</h3>
+                    <h4>Awash Bank · Full-time</h4>
+                    <span>May 2024 – Present · Ethiopia</span>
+                    <ul>
+                        <li>Git & GitHub, Jenkins, Selenium, JMeter</li>
+                        <li>Docker, Kubernetes, Puppet, Chef, Ansible</li>
+                        <li>Agile Scrum Master & Microsoft Azure Certified</li>
+                        <li>End-to-end Change Management & ITIL Processes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <h3>Project Manager</h3>
+                    <h4>Awash Bank · Full-time</h4>
+                    <span>Apr 2022 – May 2024 · Ethiopia</span>
+                    <ul>
+                        <li>Project planning, execution, and delivery</li>
+                        <li>Agile team coordination & daily standups</li>
+                        <li>Cross-functional communication & risk management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <h3>Senior QA Engineer & Knowledge Management Supervisor</h3>
+                    <h4>INSA · Full-time</h4>
+                    <span>Nov 2015 – Jan 2020 · Ethiopia</span>
+                    <ul>
+                        <li>Manual & Automated Testing, CI/CD pipelines</li>
+                        <li>Performance & Automation Testing, Agile Scrum Master</li>
+                        <li>Microsoft Azure Certified</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="timeline-item">
-            <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
-            <div class="timeline-content">
-                <h3>Project Manager</h3>
-                <h4>Awash Bank · Full-time</h4>
-                <span>Apr 2022 – May 2024 · 2 yrs 2 mos</span>
-                <ul>
-                    <li>End-to-end project planning & execution</li>
-                    <li>Cross-functional team coordination</li>
-                    <li>Risk management & mitigation strategies</li>
-                    <li>Agile stand-ups, sprint planning & retrospectives</li>
-                    <li>Collaboration with QA & DevOps teams</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
-            <div class="timeline-content">
-                <h3>Senior Software QA Engineer</h3>
-                <h4>Information Network Security Agency · Full-time</h4>
-                <span>Nov 2015 – Jan 2020 · 4 yrs 3 mos · Ethiopia</span>
-                <ul>
-                    <li>Manual & Automated Testing (Selenium, Cypress)</li>
-                    <li>Jenkins & GitLab CI/CD</li>
-                    <li>Performance Testing with JMeter</li>
-                    <li>Docker, Kubernetes, Puppet, Chef, Ansible</li>
-                    <li>Certified Scrum Master & Agile Practitioner</li>
-                    <li>Microsoft Azure Certified</li>
-                </ul>
-            </div>
+<!-- Skills Section -->
+<section class="skills">
+    <div class="section-container">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill"><i class="fas fa-check-circle"></i> QA & Testing</div>
+            <div class="skill"><i class="fas fa-check-circle"></i> Project Management</div>
+            <div class="skill"><i class="fas fa-check-circle"></i> DevOps & CI/CD</div>
+            <div class="skill"><i class="fas fa-check-circle"></i> Agile Scrum Master</div>
+            <div class="skill"><i class="fas fa-check-circle"></i> Automation & Performance Testing</div>
+            <div class="skill"><i class="fas fa-check-circle"></i> Change Management</div>
         </div>
     </div>
 </section>
@@ -110,25 +118,10 @@
     <div class="section-container">
         <h2>Certifications</h2>
         <ul>
-            <li>Generative AI Overview for Project Managers – Project Management Institute (May 2025)</li>
-            <li>Fundamentals of Agile Project Management – Project Management Institute</li>
+            <li>Generative AI Overview for Project Managers – PMI (May 2025)</li>
+            <li>Fundamentals of Agile Project Management – PMI</li>
             <li>Microsoft Azure Certified</li>
         </ul>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section class="skills">
-    <div class="section-container">
-        <h2>Core Skills</h2>
-        <div class="skills-grid">
-            <div class="skill"><i class="fas fa-check-circle"></i> QA & Testing</div>
-            <div class="skill"><i class="fas fa-check-circle"></i> Project Management</div>
-            <div class="skill"><i class="fas fa-check-circle"></i> DevOps & CI/CD</div>
-            <div class="skill"><i class="fas fa-check-circle"></i> Agile Scrum Master</div>
-            <div class="skill"><i class="fas fa-check-circle"></i> Automation & Performance Testing</div>
-            <div class="skill"><i class="fas fa-check-circle"></i> Change Management</div>
-        </div>
     </div>
 </section>
 
