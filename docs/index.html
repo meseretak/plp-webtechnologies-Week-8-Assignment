@@ -3,124 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>EthioOps — Meseret Akalu — Home</title>
+  <title>EthioOps — Meseret Akalu</title>
   <link rel="icon" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-
-  <style>
-    /* Global reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #222; background: #f9fafb; }
-
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-
-    .container { max-width: 1200px; margin: auto; padding: 1.5rem; }
-
-    /* Header */
-    .site-header { background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 999; }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-weight: 700; font-size: 1.4rem; color: #0f766e; }
-    .site-nav ul { display: flex; gap: 1.5rem; list-style: none; }
-    .site-nav a { color: #555; font-weight: 500; transition: 0.3s; }
-    .site-nav a:hover, .site-nav a.active { color: #0ea5a4; }
-
-    /* Social Sidebar */
-    .social-sidebar {
-      position: fixed;
-      top: 50%;
-      left: 1rem;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      z-index: 1000;
-    }
-    .social-sidebar a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #0f766e;
-      color: #fff;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .social-sidebar a:hover {
-      transform: scale(1.15) rotate(-8deg);
-      background: #0ea5a4;
-    }
-    .social-sidebar svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
-    }
-
-    /* Hero */
-    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; padding: 4rem 0; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #0f172a; }
-    .hero p.lead { font-size: 1.1rem; margin-bottom: 1.5rem; color: #475569; }
-    .hero-cta { display: flex; gap: 1rem; margin-bottom: 1.2rem; }
-    .btn { padding: 0.8rem 1.4rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
-    .btn-primary { background: #0f766e; color: white; }
-    .btn-primary:hover { background: #0ea5a4; }
-    .btn-ghost { border: 2px solid #0f766e; color: #0f766e; }
-    .btn-ghost:hover { background: #0f766e; color: white; }
-    .trust { font-size: 0.9rem; color: #64748b; }
-
-    /* Slider */
-    .slider-section { margin: 4rem auto; text-align: center; }
-    .slider { position: relative; overflow: hidden; border-radius: 12px; }
-    .slides-wrapper { overflow: hidden; }
-    .slides { display: flex; transition: transform 0.6s ease; }
-    .slide { min-width: 100%; }
-    .slider-btn {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      background: rgba(0,0,0,0.5); color: white; border: none;
-      padding: 0.8rem; border-radius: 50%; cursor: pointer;
-    }
-    .slider-btn.prev { left: 10px; }
-    .slider-btn.next { right: 10px; }
-    .dots { display: flex; justify-content: center; gap: 0.6rem; margin-top: 1rem; }
-    .dots button { width: 10px; height: 10px; border-radius: 50%; border: none; background: #ccc; cursor: pointer; }
-    .dots button.active { background: #0f766e; }
-
-    /* Features */
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 4rem 0; }
-    .feature { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    .feature h3 { margin-bottom: 0.6rem; color: #0f172a; }
-
-    /* Footer */
-    .site-footer { background: #0f172a; color: #eee; padding: 2rem 0; }
-    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; }
-    .footer-left .name { font-weight: 600; font-size: 1.1rem; display: block; margin-bottom: 0.6rem; }
-    .footer-pages { display: flex; gap: 1rem; }
-    .footer-pages a { color: #ccc; font-size: 0.9rem; }
-    .footer-pages a:hover { color: white; }
-    .footer-right { font-size: 0.85rem; text-align: right; }
-
-    /* Responsive */
-    @media(max-width: 900px){
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      .hero-cta { justify-content: center; }
-      .footer-inner { flex-direction: column; text-align: center; }
-    }
-  </style>
 </head>
 <body>
 
   <!-- Social Sidebar -->
   <aside class="social-sidebar">
     <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank" aria-label="LinkedIn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1c-29.49 0-53.79-24.3-53.79-53.8A53.79 53.79 0 0153.8.5a53.8 53.8 0 0153.79 53.8c0 29.5-24.3 53.8-53.8 53.8zM447.9 448h-92.4V302.4c0-34.7-.7-79.3-48.4-79.3-48.5 0-55.9 37.9-55.9 77v148H159.3V148.9h88.6v40.8h1.3c12.3-23.3 42.5-47.9 87.5-47.9 93.5 0 110.7 61.6 110.7 141.7V448z"/></svg>
+      <i class="fab fa-linkedin-in"></i>
     </a>
     <a href="https://github.com/meseretak" target="_blank" aria-label="GitHub">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-2.9 0-5.2-1.6-5.2-3.6s2.3-3.6 5.2-3.6c2.9 0 5.2 1.6 5.2 3.6zm-33.1-10.7c-.7 1.6-3.3 2.1-5.5 1.1-2.2-1-3.4-3-2.7-4.6.7-1.6 3.3-2.1 5.5-1.1 2.3 1 3.4 3 2.7 4.6zm44.2-1.1c-2.2 1-4.8.5-5.5-1.1-.7-1.6.4-3.6 2.7-4.6 2.2-1 4.8-.5 5.5 1.1.7 1.6-.4 3.6-2.7 4.6zm74.2 11.8c0 2-2.3 3.6-5.2 3.6-2.9 0-5.2-1.6-5.2-3.6s2.3-3.6 5.2-3.6c2.9 0 5.2 1.6 5.2 3.6zm26.7-16.4c-.7 1.6-3.3 2.1-5.5 1.1-2.2-1-3.4-3-2.7-4.6.7-1.6 3.3-2.1 5.5-1.1 2.2 1 3.4 3 2.7 4.6zm26.3 19.5c0 2-2.3 3.6-5.2 3.6-2.9 0-5.2-1.6-5.2-3.6s2.3-3.6 5.2-3.6c2.9 0 5.2 1.6 5.2 3.6zm65.6-105.1c0 49.2-39.8 89-89 89s-89-39.8-89-89 39.8-89 89-89 89 39.8 89 89z"/></svg>
+      <i class="fab fa-github"></i>
     </a>
     <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.9-42.3-48.6-48.6C465.3 64 288 64 288 64S110.7 64 74.9 75.5c-23.7 6.3-42.3 24.9-48.6 48.6C16 159.9 16 256 16 256s0 96.1 10.3 131.9c6.3 23.7 24.9 42.3 48.6 48.6C110.7 448 288 448 288 448s177.3 0 213.1-11.5c23.7-6.3 42.3-24.9 48.6-48.6C560 352.1 560 256 560 256s0-96.1-10.3-131.9zM232 338V174l142 82-142 82z"/></svg>
+      <i class="fab fa-youtube"></i>
     </a>
   </aside>
 
@@ -136,68 +35,76 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="toggle menu">☰</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <main>
-    <section class="hero container">
-      <div class="hero-left">
-        <h1>Meseret Akalu — QA & DevOps Consultant</h1>
-        <p class="lead">I help teams ship with confidence — testing strategy, automation, security checks, and reliable DevOps practices.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="services.html">Our Services</a>
-          <a class="btn btn-ghost" href="contact.html">Work with me</a>
-        </div>
-        <div class="trust">
-          <span>9+ years experience</span> • <span>Banking & Security</span> • <span>Project Manager</span>
-        </div>
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-left">
+      <h1>Meseret Akalu — QA & DevOps Consultant</h1>
+      <p class="lead">Helping teams ship with confidence — <strong>testing strategy</strong>, <strong>automation</strong>, <strong>security</strong>, and <strong>DevOps practices</strong>.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="services.html">Explore Services</a>
+        <a class="btn btn-outline" href="contact.html">Get in Touch</a>
       </div>
-      <div class="hero-right">
-        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="team working" />
-      </div>
-    </section>
+    </div>
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Team working">
+    </div>
+  </section>
 
-    <!-- Slider -->
-    <section class="slider-section container">
-      <h2 class="section-title">Work in Action</h2>
-      <div class="slider" id="mainSlider">
-        <button class="slider-btn prev" aria-label="previous">‹</button>
-        <div class="slides-wrapper">
-          <div class="slides">
-            <div class="slide"><img src="https://images.unsplash.com/photo-1581091215367-6c6d9b1b1b5b?auto=format&fit=crop&w=1600&q=80" alt="testing workflow"></div>
-            <div class="slide"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="devops pipeline"></div>
-            <div class="slide"><img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1600&q=80" alt="automation"></div>
-            <div class="slide"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80" alt="dashboard"></div>
+  <!-- Slider -->
+  <section class="slider-section container">
+    <h2 class="section-title">Work in Action</h2>
+    <div class="slider" id="mainSlider">
+      <button class="slider-btn prev">‹</button>
+      <div class="slides-wrapper">
+        <div class="slides">
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1581091215367-6c6d9b1b1b5b?auto=format&fit=crop&w=1600&q=80" alt="Testing">
+            <div class="caption">QA Process Excellence</div>
+          </div>
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="DevOps">
+            <div class="caption">CI/CD & Automation</div>
+          </div>
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1600&q=80" alt="Automation">
+            <div class="caption">Automation Pipelines</div>
+          </div>
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80" alt="Dashboard">
+            <div class="caption">Performance Monitoring</div>
           </div>
         </div>
-        <button class="slider-btn next" aria-label="next">›</button>
-        <div class="dots"></div>
       </div>
-    </section>
+      <button class="slider-btn next">›</button>
+      <div class="dots"></div>
+    </div>
+  </section>
 
-    <!-- Features -->
-    <section class="container features-grid">
-      <article class="feature">
-        <h3>Test Strategy & Planning</h3>
-        <p>From BRD to release — clear mapping, risk-based coverage, and measurable acceptance criteria.</p>
-      </article>
-      <article class="feature">
-        <h3>Automation & CI</h3>
-        <p>Selenium / Cypress pipelines, test reporting, and maintainable suites for reliable regression checks.</p>
-      </article>
-      <article class="feature">
-        <h3>Performance & Security</h3>
-        <p>Load testing, vulnerability scanning and pre-prod security checks — reduce surprises in production.</p>
-      </article>
-    </section>
-  </main>
+  <!-- Features -->
+  <section class="container features-grid">
+    <article class="feature">
+      <h3>📋 Test Strategy</h3>
+      <p>From BRD to release — clear mapping, risk-based coverage, and measurable acceptance criteria.</p>
+    </article>
+    <article class="feature">
+      <h3>⚙️ Automation</h3>
+      <p>Selenium, Cypress pipelines, test reporting, and maintainable suites for regression checks.</p>
+    </article>
+    <article class="feature">
+      <h3>🔒 Security & Performance</h3>
+      <p>Load testing, vulnerability scanning, and pre-prod security checks to reduce risks.</p>
+    </article>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <span class="name">Meseret Akalu</span>
+        <span class="name">© 2025 Meseret Akalu</span>
         <nav class="footer-pages">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -207,52 +114,11 @@
       </div>
       <div class="footer-right">
         <p>QA & DevOps Consulting — Ethiopia</p>
-        <small>© <span id="year">2025</span> Meseret Akalu. All rights reserved.</small>
       </div>
     </div>
   </footer>
 
-  <script>
-    // === Slider JS ===
-    const slides = document.querySelector(".slides");
-    const slideEls = document.querySelectorAll(".slide");
-    const prevBtn = document.querySelector(".slider-btn.prev");
-    const nextBtn = document.querySelector(".slider-btn.next");
-    const dotsContainer = document.querySelector(".dots");
-
-    let index = 0;
-
-    function updateSlider() {
-      slides.style.transform = `translateX(-${index * 100}%)`;
-      document.querySelectorAll(".dots button").forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
-    }
-
-    slideEls.forEach((_, i) => {
-      const dot = document.createElement("button");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => {
-        index = i;
-        updateSlider();
-      });
-      dotsContainer.appendChild(dot);
-    });
-
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + slideEls.length) % slideEls.length;
-      updateSlider();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % slideEls.length;
-      updateSlider();
-    });
-
-    setInterval(() => {
-      index = (index + 1) % slideEls.length;
-      updateSlider();
-    }, 4000);
-  </script>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
