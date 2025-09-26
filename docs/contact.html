@@ -1,21 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — EthioOps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Optional: Firebase SDK (only enable if you configured firebase-config.js) -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
-  <script src="firebase/firebase-config.js"></script> -->
 </head>
 <body>
+  <aside class="social-sidebar">
+    <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/meseretak" target="_blank">GitHub</a>
+    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+  </aside>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">EthioOps</a>
-      <button id="nav-toggle-4" class="nav-toggle" aria-label="Open navigation">☰</button>
-      <nav id="site-nav-4" class="site-nav">
+      <a class="brand" href="index.html">EthioOps</a>
+      <nav class="site-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -23,40 +25,62 @@
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
+      <button id="nav-toggle-4" class="nav-toggle">☰</button>
     </div>
   </header>
 
   <main class="container contact-page">
-    <h1>Contact Us</h1>
-    <p>Have an inquiry? Fill the form and we'll get back to you.</p>
+    <h1>Contact & Registration</h1>
+    <p>Fill the form to register interest, request a quote, or schedule a meeting.</p>
 
-    <form id="contact-form" class="contact-form" novalidate>
-      <label for="name">Full name</label>
-      <input id="name" name="name" type="text" required minlength="3" placeholder="Your name">
+    <form id="contactForm" class="contact-form" novalidate>
+      <label>
+        Full name
+        <input type="text" name="name" id="name" placeholder="Your full name" required>
+      </label>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required placeholder="you@example.com">
+      <label>
+        Email
+        <input type="email" name="email" id="email" placeholder="you@domain.com" required>
+      </label>
 
-      <label for="subject">Subject</label>
-      <input id="subject" name="subject" type="text" required placeholder="Subject">
+      <label>
+        Organization
+        <input type="text" name="org" id="org" placeholder="Company / organization">
+      </label>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required minlength="10" placeholder="Your message"></textarea>
+      <label>
+        Message / Scope
+        <textarea name="message" id="message" rows="6" placeholder="Brief description of scope or request" required></textarea>
+      </label>
 
       <div class="form-actions">
-        <button type="submit" class="btn">Send Message</button>
-        <button type="button" id="save-local" class="btn btn-outline">Save Locally</button>
+        <button type="submit" class="btn">Send message</button>
+        <button type="reset" class="btn btn-ghost">Reset</button>
       </div>
 
-      <div id="form-status" aria-live="polite"></div>
+      <div id="formStatus" class="form-status" aria-live="polite"></div>
     </form>
   </main>
 
-  <footer class="site-footer small-footer">
-    <div class="container copyright">© <span id="year-4"></span> EthioOps</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="name">Meseret Akalu</span>
+        <nav class="footer-pages">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <p>QA & DevOps Consulting — Ethiopia</p>
+        <small>© <span id="year-contact">2025</span> Meseret Akalu</small>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/validator.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
