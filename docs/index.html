@@ -4,140 +4,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meseret Portfolio</title>
-
-  <!-- Font Awesome & AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <!-- Header -->
 <header>
-  <div class="container">
-    <div class="logo">Meseret<span>Portfolio</span></div>
+  <div class="nav-container">
+    <div class="logo"><img src="images/logo.png" alt="Logo"> MeseretPortfolio</div>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.php" class="active">Home</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="services.php">Services</a></li>
+        <li><a href="portfolio.php">Portfolio</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
     </nav>
-    <a href="contact.html" class="cta-btn">Get in Touch</a>
+    <a href="contact.php" class="btn-nav">Get in Touch</a>
   </div>
 </header>
 
-<!-- Slider -->
-<section class="slider">
-  <div class="slides fade">
-    <img src="images/slider1.jpg" alt="Slide 1">
-    <div class="slider-text" data-aos="fade-up">
-      <h1>Hi, I'm <span>Meseret</span></h1>
-      <p>Project Manager & QA Expert – Delivering Quality with Precision.</p>
-      <a href="contact.html" class="btn">Work With Me</a>
+<!-- Hero / Slider -->
+<section class="hero-slider">
+  <div class="slides">
+    <div class="slide" style="background-image: url('images/hero1.jpg');">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Empowering Quality & Innovation</h1>
+        <p>Building robust software, delivering excellence</p>
+        <a href="about.php" class="btn-primary">Learn More</a>
+      </div>
     </div>
-  </div>
-  <div class="slides fade">
-    <img src="images/slider2.jpg" alt="Slide 2">
-    <div class="slider-text" data-aos="fade-up">
-      <h1>Passion Meets Innovation</h1>
-      <p>Transforming ideas into scalable digital solutions.</p>
+    <div class="slide" style="background-image: url('images/hero2.jpg');">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>DevOps. QA. Reliability.</h1>
+        <p>From ideas to scalable solutions</p>
+        <a href="services.php" class="btn-primary">My Services</a>
+      </div>
     </div>
-  </div>
-  <div class="slides fade">
-    <img src="images/slider3.jpg" alt="Slide 3">
-    <div class="slider-text" data-aos="fade-up">
-      <h1>Agile. DevOps. QA.</h1>
-      <p>Empowering businesses with reliable tech solutions.</p>
+    <div class="slide" style="background-image: url('images/hero3.jpg');">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Projects That Matter</h1>
+        <p>Turning visions into real systems</p>
+        <a href="portfolio.php" class="btn-primary">View Portfolio</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- About Preview -->
-<section class="about-preview" data-aos="fade-right">
-  <div class="section-container">
-    <h2>About Me</h2>
-    <p>I’m Meseret, passionate about building strong IT projects and ensuring quality software through project management and QA expertise.</p>
-    <a href="about.html" class="btn">Read More</a>
+<!-- Stats / Impact -->
+<section class="stats" data-aos="fade-up">
+  <div class="stats-container">
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat">
+      <h3>50+</h3>
+      <p>Projects Delivered</p>
+    </div>
+    <div class="stat">
+      <h3>30+</h3>
+      <p>Clients Served</p>
+    </div>
+    <div class="stat">
+      <h3>99%</h3>
+      <p>Client Satisfaction</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mission / Vision -->
+<section class="mission" data-aos="fade-right">
+  <div class="mission-container">
+    <div class="text-block">
+      <h2>Mission</h2>
+      <p>To deliver software solutions grounded in quality, reliability, and innovation, serving clients with integrity and excellence.</p>
+    </div>
+    <div class="text-block">
+      <h2>Vision</h2>
+      <p>To be a go-to name in QA, DevOps, project leadership—empowering technology growth locally and globally.</p>
+    </div>
   </div>
 </section>
 
 <!-- Services Preview -->
 <section class="services-preview" data-aos="fade-up">
   <div class="section-container">
-    <h2>My Services</h2>
+    <h2>Services I Provide</h2>
     <div class="services-cards">
       <div class="card" data-aos="zoom-in">
         <i class="fas fa-laptop-code"></i>
-        <h3>Web Development</h3>
-        <p>Modern responsive websites with clean design.</p>
+        <h3>Web & App Dev</h3>
+        <p>Modern, responsive web & mobile solutions</p>
       </div>
-      <div class="card" data-aos="zoom-in">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-vial"></i>
-        <h3>QA & Testing</h3>
-        <p>Automation & manual testing to ensure reliability.</p>
+        <h3>Quality Assurance</h3>
+        <p>Automation, performance, manual testing</p>
       </div>
-      <div class="card" data-aos="zoom-in">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <i class="fas fa-project-diagram"></i>
         <h3>Project Management</h3>
-        <p>Agile project delivery with DevOps practices.</p>
+        <p>Agile, DevOps, stakeholder alignment</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Portfolio Preview -->
-<section class="portfolio-preview" data-aos="fade-left">
+<!-- Partners / Clients -->
+<section class="partners" data-aos="fade-up">
   <div class="section-container">
-    <h2>My Work</h2>
-    <p>Explore some of my latest projects and case studies.</p>
-    <a href="portfolio.html" class="btn">See Portfolio</a>
+    <h2>Trusted By</h2>
+    <div class="partners-logos">
+      <img src="images/partner1.png" alt="Partner 1">
+      <img src="images/partner2.png" alt="Partner 2">
+      <img src="images/partner3.png" alt="Partner 3">
+      <img src="images/partner4.png" alt="Partner 4">
+    </div>
   </div>
 </section>
 
-<!-- Contact Preview -->
+<!-- Contact Prompt -->
 <section class="contact-preview" data-aos="fade-up">
   <div class="section-container">
-    <h2>Contact Me</h2>
-    <p>Have a project in mind? Let’s collaborate.</p>
-    <a href="contact.html" class="btn">Get in Touch</a>
+    <h2>Let's Talk</h2>
+    <p>Have an idea or project? Let's collaborate to make it real.</p>
+    <a href="contact.php" class="btn-primary">Contact Me</a>
   </div>
 </section>
-
-<!-- Social Sidebar -->
-<div class="social-sidebar">
-  <a href="#" class="social-icon facebook" data-aos="fade-right"><i class="fab fa-facebook-f"></i></a>
-  <a href="#" class="social-icon twitter" data-aos="fade-right"><i class="fab fa-twitter"></i></a>
-  <a href="#" class="social-icon linkedin" data-aos="fade-right"><i class="fab fa-linkedin-in"></i></a>
-  <a href="#" class="social-icon instagram" data-aos="fade-right"><i class="fab fa-instagram"></i></a>
-</div>
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
+  <div class="footer-container">
+    <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
+  </div>
 </footer>
 
-<!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({ once: true });
 
-  // Simple slider
-  let slideIndex = 0;
-  showSlides();
-  function showSlides() {
-    let slides = document.getElementsByClassName("slides");
-    for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // 4s per slide
+  // Slider Logic
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.hero-slider .slide');
+  function showSlide(idx) {
+    slides.forEach((sl, i) => {
+      sl.style.display = (i === idx) ? 'block' : 'none';
+    });
   }
+  function startSlider() {
+    showSlide(currentIndex);
+    currentIndex = (currentIndex + 1) % slides.length;
+    setTimeout(startSlider, 5000);
+  }
+  window.addEventListener('load', startSlider);
 </script>
-
 </body>
 </html>
