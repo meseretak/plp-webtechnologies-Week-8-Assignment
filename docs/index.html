@@ -7,26 +7,6 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Slider */
-    .hero-slider { position: relative; overflow: hidden; height: 80vh; }
-    .slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; display: none; transition: opacity 1s ease-in-out; }
-    .slide-content { position: absolute; bottom: 20%; left: 10%; color: #fff; max-width: 500px; }
-    .btn-primary { display: inline-block; margin-top: 1rem; padding: 10px 20px; background: #ffcc00; color: #000; font-weight: bold; border-radius: 5px; text-decoration: none; transition: 0.3s; }
-    .btn-primary:hover { background: #e6b800; }
-
-    /* Footer Map */
-    .footer-map { margin: 1.5rem 0; }
-    .footer-map iframe { width: 100%; height: 250px; border: 0; border-radius: 8px; }
-
-    /* Footer */
-    footer { background: #002233; color: #fff; padding: 2rem 1rem; text-align: center; }
-    .social-icons a { color: #ffcc00; margin: 0 0.5rem; font-size: 1.2rem; transition: 0.3s; }
-    .social-icons a:hover { color: #1da1f2; }
-
-    /* Responsive */
-    @media(max-width:768px){ .slide-content { left: 5%; bottom: 15%; max-width: 90%; } }
-  </style>
 </head>
 <body>
 
@@ -47,46 +27,57 @@
   </div>
 </header>
 
-<!-- Hero / Slider -->
+<!-- Hero Slider -->
 <section class="hero-slider">
-  <div class="slide" style="background-image: url('assets/images/hero1.jpg');">
-    <div class="slide-content" data-aos="fade-up">
-      <h1>Hi, I'm Meseret 👋</h1>
-      <p>QA Expert • Project Manager • Problem Solver</p>
-      <a href="about.html" class="btn-primary">Discover More</a>
+  <div class="slides">
+    <div class="slide" style="background-image: url('assets/images/hero1.jpg');" data-index="0">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Hi, I'm Meseret 👋</h1>
+        <p>QA Expert • Project Manager • Problem Solver</p>
+        <a href="about.html" class="btn-primary">Discover More</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('assets/images/hero2.jpg');" data-index="1">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Quality & Innovation</h1>
+        <p>Delivering trusted software solutions worldwide</p>
+        <a href="services.html" class="btn-primary">My Services</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('assets/images/hero3.jpg');" data-index="2">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Driven by Results</h1>
+        <p>Building products people love and trust</p>
+        <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('assets/images/hero4.jpg');" data-index="3">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Automation & QA</h1>
+        <p>Ensuring flawless software delivery</p>
+        <a href="services.html" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('assets/images/hero5.jpg');" data-index="4">
+      <div class="slide-content" data-aos="fade-up">
+        <h1>Innovation & Excellence</h1>
+        <p>Projects delivered with precision and care</p>
+        <a href="contact.html" class="btn-primary">Contact Me</a>
+      </div>
     </div>
   </div>
-  <div class="slide" style="background-image: url('assets/images/hero2.jpg');">
-    <div class="slide-content" data-aos="fade-up">
-      <h1>Quality & Innovation</h1>
-      <p>Delivering trusted software solutions worldwide</p>
-      <a href="services.html" class="btn-primary">My Services</a>
-    </div>
-  </div>
-  <div class="slide" style="background-image: url('assets/images/hero3.jpg');">
-    <div class="slide-content" data-aos="fade-up">
-      <h1>Driven by Results</h1>
-      <p>Building products that people love and trust</p>
-      <a href="portfolio.html" class="btn-primary">View Portfolio</a>
-    </div>
-  </div>
-  <div class="slide" style="background-image: url('assets/images/hero4.jpg');">
-    <div class="slide-content" data-aos="fade-up">
-      <h1>End-to-End QA</h1>
-      <p>Ensuring software reliability and excellence</p>
-      <a href="services.html" class="btn-primary">Learn More</a>
-    </div>
-  </div>
-  <div class="slide" style="background-image: url('assets/images/hero5.jpg');">
-    <div class="slide-content" data-aos="fade-up">
-      <h1>Collaboration & Growth</h1>
-      <p>Working with teams to achieve software excellence</p>
-      <a href="contact.html" class="btn-primary">Contact Me</a>
-    </div>
+
+  <!-- Dots Navigation -->
+  <div class="slider-dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+    <span class="dot" data-index="4"></span>
   </div>
 </section>
 
-<!-- Stats / Impact -->
+<!-- Stats -->
 <section class="stats" data-aos="fade-up">
   <div class="stats-container">
     <div class="stat"><i class="fas fa-calendar-check"></i><h3>10+</h3><p>Years Experience</p></div>
@@ -101,23 +92,38 @@
   <div class="section-container">
     <h2>What I Do</h2>
     <div class="services-cards">
-      <div class="card" data-aos="zoom-in"><i class="fas fa-laptop-code"></i><h3>Web Development</h3><p>Responsive websites with modern UI/UX.</p></div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-vial"></i><h3>QA & Testing</h3><p>Manual & automated testing for reliability.</p></div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-project-diagram"></i><h3>Project Management</h3><p>Agile management for timely delivery.</p></div>
+      <div class="card" data-aos="zoom-in"><i class="fas fa-laptop-code"></i><h3>Web Development</h3><p>Responsive websites with modern UI/UX design.</p></div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-vial"></i><h3>QA & Testing</h3><p>Manual & automated testing to ensure reliability.</p></div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-project-diagram"></i><h3>Project Management</h3><p>Agile management ensuring timely delivery.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" data-aos="fade-up">
+  <div class="section-container">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial"><p>“Meseret is the best QA lead we’ve ever worked with. Professional, sharp, and reliable.”</p><h4>- John Doe, Tech Startup CEO</h4></div>
+      <div class="testimonial"><p>“Thanks to Meseret, our product launched flawlessly and on time.”</p><h4>- Sarah L, Project Manager</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter" data-aos="fade-up">
+  <div class="section-container">
+    <h2>Stay Updated</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
   <div class="footer-container">
-    <div class="footer-map" data-aos="fade-up">
-      <h4>Find Me</h4>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0571962536815!2d38.74679981529323!3d9.030019391125995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f0xxxx%3A0x9e0fcbxxxx!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2set!4v1695296400000!5m2!1sen!2set" 
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
     <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
     <div class="social-icons">
       <a href="#"><i class="fab fa-facebook"></i></a>
@@ -125,28 +131,37 @@
       <a href="#"><i class="fab fa-linkedin"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </div>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({ once: true });
+AOS.init({ once: true });
 
-  // Slider functionality
-  let slides = document.querySelectorAll('.hero-slider .slide');
-  let currentIndex = 0;
+let currentIndex = 0;
+const slides = document.querySelectorAll('.hero-slider .slide');
+const dots = document.querySelectorAll('.dot');
 
-  function showSlide(idx) {
-    slides.forEach((slide,i) => slide.style.display = (i === idx) ? 'block' : 'none');
-  }
+function showSlide(idx) {
+  slides.forEach((sl, i) => sl.classList.toggle('active', i === idx));
+  dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+}
 
-  function startSlider() {
-    showSlide(currentIndex);
-    currentIndex = (currentIndex + 1) % slides.length;
-    setTimeout(startSlider, 5000);
-  }
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
 
-  window.addEventListener('load', startSlider);
+dots.forEach(dot => dot.addEventListener('click', () => {
+  currentIndex = parseInt(dot.dataset.index);
+  showSlide(currentIndex);
+}));
+
+showSlide(currentIndex);
+setInterval(nextSlide, 5000);
 </script>
 </body>
 </html>
