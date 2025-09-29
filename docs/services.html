@@ -6,13 +6,97 @@
   <title>Services — EthioOps</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f7f8fc;
+      color: #333;
+    }
+    .services-page h1 {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #222;
+      animation: fadeDown 1s ease;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #0077cc;
+    }
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    /* Related posts */
+    .related-posts {
+      padding: 2rem;
+      background: #eef6fb;
+      margin-top: 2rem;
+    }
+    .related-posts h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #004466;
+    }
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .post-card:hover {
+      transform: scale(1.05);
+    }
+    .post-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: #0077cc;
+    }
+    .post-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <aside class="social-sidebar">
-    <a href="https://www.linkedin.com/in/meseret-akalu-76363121b/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/meseretak" target="_blank">GitHub</a>
-    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-  </aside>
 
   <header class="site-header">
     <div class="container header-inner">
@@ -30,7 +114,8 @@
   </header>
 
   <main class="container services-page">
-    <h1>Services</h1>
+    <h1>Our Services</h1>
+
     <div class="services-grid">
       <div class="service-card">
         <h3>Test Strategy & Planning</h3>
@@ -46,9 +131,36 @@
       </div>
       <div class="service-card">
         <h3>Performance & Security</h3>
-        <p>Load testing, vulnerability scanning, pre-prod security checks and remediation plans.</p>
+        <p>Load testing, vulnerability scanning, pre-prod security checks.</p>
+      </div>
+      <div class="service-card">
+        <h3>DevOps Consulting</h3>
+        <p>CI/CD pipeline setup, monitoring tools, and cloud optimization.</p>
+      </div>
+      <div class="service-card">
+        <h3>Training & Mentorship</h3>
+        <p>QA workshops, DevOps best practices, and team coaching.</p>
       </div>
     </div>
+
+    <!-- Related posts / case studies -->
+    <section class="related-posts">
+      <h2>Case Studies & Insights</h2>
+      <div class="posts-grid">
+        <div class="post-card">
+          <h4>Scaling QA for a Banking App</h4>
+          <p>How we implemented automated regression and improved test coverage by 70%.</p>
+        </div>
+        <div class="post-card">
+          <h4>CI/CD Pipeline Setup</h4>
+          <p>Helping startups reduce release time from 2 weeks to daily deployments.</p>
+        </div>
+        <div class="post-card">
+          <h4>Performance Testing Success</h4>
+          <p>Stress-tested a payment gateway to handle 1M+ transactions/day.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -69,6 +181,5 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
