@@ -34,7 +34,7 @@ header nav ul li a.active, header nav ul li a:hover { background: #ffcc00; color
 .services-cards .card:hover { transform: translateY(-10px); background: #ffcc00; color:#000; }
 .services-cards .card i { font-size: 30px; margin-bottom: 15px; }
 
-/* Testimonials */
+/* Testimonials u */
 .testimonials { background: #f4f4f4; padding: 60px 0; text-align: center; }
 .testimonial-cards { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .testimonial { background: #fff; padding: 25px; border-radius: 10px; width: 300px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
