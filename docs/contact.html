@@ -1,73 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Meseret Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Meseret Portfolio</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    <div class="container">
-        <div class="logo">Meseret Portfolio</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="contact.html" class="cta-btn">Get in Touch</a>
-    </div>
+  <div class="container header-container">
+    <div class="logo">Meseret<span>Portfolio</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="cta-btn">Get in Touch</a>
+  </div>
 </header>
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+  <div class="hero-content">
+    <h1><i class="fas fa-envelope-open-text"></i> Let’s Connect</h1>
+    <p>Got a project, idea, or just want to say hello? Fill in the form below — I’ll get back to you as soon as possible.</p>
+  </div>
+</section>
 
 <!-- Contact Section -->
 <section class="contact-section">
-    <div class="section-container">
-        <h2>Contact Me</h2>
-        <p>Fill out the form below to get in touch or subscribe to updates.</p>
+  <div class="section-container">
+    <div class="contact-grid">
 
-        <!-- Contact Form -->
-        <form action="#" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname" placeholder="Your first name" required>
-            </div>
-            <div class="form-group">
-                <label for="lname">Second Name:</label>
-                <input type="text" id="lname" name="lname" placeholder="Your second name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
-            </div>
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2><i class="fas fa-paper-plane"></i> Send Me a Message</h2>
+        <form action="#" method="POST">
 
-            <div class="form-group checkbox">
-                <input type="checkbox" id="subscribe" name="subscribe">
-                <label for="subscribe">Subscribe to newsletter</label>
-            </div>
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="fname" placeholder="First Name" required>
+          </div>
 
-            <button type="submit" class="btn">Send Message</button>
+          <div class="form-group">
+            <i class="fas fa-user-tag"></i>
+            <input type="text" name="lname" placeholder="Second Name" required>
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-heading"></i>
+            <input type="text" name="subject" placeholder="Subject" required>
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-comment-alt"></i>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Subscribe to Newsletter</label>
+          </div>
+
+          <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
         </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2><i class="fas fa-address-book"></i> Contact Info</h2>
+        <ul>
+          <li><i class="fas fa-phone"></i> +251-900-000-000</li>
+          <li><i class="fas fa-envelope"></i> meseret@example.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
+  <p>&copy; 2025 Meseret Portfolio. All rights reserved.</p>
 </footer>
 
 </body>
